@@ -15,13 +15,13 @@ The config.js file is used by:
 */
 const databaseOptions = {
     host: 'localhost',
-    user: 'ENTER_MYSQL_ACCOUNT_NAME_HERE',
-    password: 'ENTER_MYSQL_PASSWORD_HERE'
+    user: 'webcontroller',
+    password: 'web'
 };
 
 const TTNOptions = {
-    appID: 'ENTER_TTN_APP_ID_HERE',
-    accessKey: 'ENTER_TTN_ACCESSKEY_HERE'
+    appID: '20180102',
+    accessKey: 'ttn-account-v2.PAUZXYPrQB7VVhB3x_55OsfZrdAQX5S42nxExNSYk_E'
 };
 
 module.exports = {databaseOptions: databaseOptions, TTNOptions: TTNOptions};
