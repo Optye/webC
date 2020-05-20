@@ -27,7 +27,6 @@ Additional information:
 const ttn = require('ttn');
 const moment = require('moment');
 const config = require('./config.js');
-const hex2ascii = require('hex2ascii');
 
 const appID = config.TTNOptions.appID;
 const accessKey = config.TTNOptions.accessKey;
