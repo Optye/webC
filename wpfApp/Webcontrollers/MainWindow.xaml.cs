@@ -35,10 +35,22 @@ namespace Webcontrollers
 
         private void showButton_Click(object sender, RoutedEventArgs e)
         {
-            int index = Convert.ToInt32(indexTextBox.Text);
-            selectedData = dataRepository.GetOne(index);
+            try
+            {
+                int index = Convert.ToInt32(indexTextBox.Text);
+                selectedData = dataRepository.GetOne(index);
 
-            this.DataContext = selectedData;
+                this.DataContext = selectedData;
+            }
+            catch (Exception)
+            {
+                int index = 1;
+                selectedData = dataRepository.GetOne(index);
+
+                this.DataContext = selectedData;
+            }
+            
+            
         }
     }
 }
