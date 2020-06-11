@@ -21,18 +21,14 @@ con.connect(function(err) {
 ttn.data(TTNOptions.appID, TTNOptions.accessKey)
     .then(function (client) {
         client.on("uplink", async function (devID, payload) {
-        console.log("Received uplink from", devID);
-        if( payload.counter != undefined) {
-            jsonString = stringFromUTF8Array(payload.payload_raw);
-            var data = JSON.parse(jsonString);
-            console.log(data);
-            const query = "INSERT INTO data SET ?";
-            const values = {
-                A: data.A,
-                B: data.B
-            };
-            con.query(query, data, function (err, results) {
-                if(err) throw err;
+            console.log("Received uplink from", devID);
+            if( payload.counter != undefined) {
+                jsonString = stringFromUTF8Array(payload.payload_raw);
+                var data = JSON.parse(jsonString);
+                console.log(data);
+                const query = "INSERT INTO data SET ?";
+                con.query(query, data, function (err, results) {
+                    if(err) throw err;
                     console.log("Record inserted: ",results.insertId);
                 });
             }
