@@ -44,14 +44,6 @@ namespace Webcontrollers
             {
                 Data lastOne = dataList.Last();
                 latest = lastOne.Id;
-
-                //foreach(Data data in dataList)
-                //{
-                //    if(data.Id > latest)
-                //    {
-                //        latest = data.Id; 
-                //    }
-                //}
             }
         }
 
@@ -59,17 +51,9 @@ namespace Webcontrollers
         {
             dataRepository = data;    
             try
-            {
-                if (indexTextBox.Text != "")
-                {
-                    int index = Convert.ToInt32(indexTextBox.Text);
-                    selectedData = dataRepository.GetOne(index);
-                }
-                else
-                {
-                    int index = latest;
-                    selectedData = dataRepository.GetOne(index);
-                }
+            {                
+                int index = latest;
+                selectedData = dataRepository.GetOne(index);                
 
                 this.DataContext = selectedData;
             }
@@ -80,38 +64,6 @@ namespace Webcontrollers
 
                 this.DataContext = selectedData;
             }
-        }
-
-        private void showButton_Click(object sender, RoutedEventArgs e)
-        {
-            dataRepository = new DataRepository();
-            dataList = dataRepository.GetAll();
-            getMaxValue();
-            MessageBox.Show(Convert.ToString(latest));
-            try
-            {
-                if(indexTextBox.Text != "")
-                {
-                    int index = Convert.ToInt32(indexTextBox.Text);
-                    selectedData = dataRepository.GetOne(index);
-                }
-                else
-                {
-                    int index = latest;
-                    selectedData = dataRepository.GetOne(index);
-                }                
-
-                this.DataContext = selectedData;
-            }
-            catch (Exception)
-            {
-                int index = 1;
-                selectedData = dataRepository.GetOne(index);
-
-                this.DataContext = selectedData;
-            }
-            
-            
         }
 
         private void aButton_Click(object sender, RoutedEventArgs e)
@@ -162,6 +114,22 @@ namespace Webcontrollers
                 resultLabel.Content = "You're unlucky, they were equal";
 
             }
+        }
+
+        private void showDataButton_Click(object sender, RoutedEventArgs e)
+        {
+            dataRepository = new DataRepository();
+            dataList = dataRepository.GetAll();
+
+            foreach (Data data in dataList)
+            {
+                dataListBox.Items.Add(Convert.ToString(data.Id).PadRight(20) + Convert.ToString(data.A).PadRight(20) + Convert.ToString(data.B));
+            }
+        }
+
+        private void emptyButton_Click(object sender, RoutedEventArgs e)
+        {
+            dataListBox.Items.Clear();
         }
     }
 }
