@@ -160,6 +160,7 @@ namespace Webcontrollers
             else
             {
                 resultLabel.Content = "You're unlucky, they were equal";
+
             }
         }
     }
