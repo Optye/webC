@@ -7,14 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock Name="aTextBlock" HorizontalAlignment="Left" Margin="179,62,0,0" TextWrapping="Wrap" Text="{Binding A}" VerticalAlignment="Top"/>
-        <TextBlock Name="bTextBlock" HorizontalAlignment="Left" Margin="179,88,0,0" TextWrapping="Wrap" Text="{Binding B}" VerticalAlignment="Top"/>
+        <TextBlock Name="aTextBlock" HorizontalAlignment="Left" Margin="31,59,0,0" TextWrapping="Wrap" Text="{Binding A}" VerticalAlignment="Top" Width="14" Height="13"/>
+        <TextBlock Name="bTextBlock" HorizontalAlignment="Left" Margin="31,83,0,0" TextWrapping="Wrap" Text="{Binding B}" VerticalAlignment="Top" Height="17" Width="16"/>
         <Label Content="A:" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top"/>
-        <Label Content="B:" HorizontalAlignment="Left" Margin="12,78,0,0" VerticalAlignment="Top"/>
+        <Label Content="B:" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top"/>
         <Button Name="aButton" Content="A" HorizontalAlignment="Left" Margin="161,83,0,0" VerticalAlignment="Top" Width="75" Click="aButton_Click"/>
         <Button Name="bButton" Content="B" HorizontalAlignment="Left" Margin="241,83,0,0" VerticalAlignment="Top" Width="75" Click="bButton_Click"/>
-        <Label Content="Kies de hoogste:" HorizontalAlignment="Left" Margin="161,52,0,0" VerticalAlignment="Top" Width="155"/>
-        <Label Name="resultLabel" Content="" HorizontalAlignment="Left" Margin="286,268,0,0" VerticalAlignment="Top"/>
+        <Label Content="Kies de hoogste:" HorizontalAlignment="Left" Margin="161,52,0,0" VerticalAlignment="Top" Width="97"/>
+        <Label Name="resultLabel" Content="" HorizontalAlignment="Left" Margin="255,52,0,0" VerticalAlignment="Top" Height="30" Width="190"/>
         <Button Name="showDataButton" Content="Show All Data" HorizontalAlignment="Left" Margin="548,85,0,0" VerticalAlignment="Top" Width="88" Click="showDataButton_Click"/>
         <ListBox Name="dataListBox" HorizontalAlignment="Left" Height="260" Margin="12,150,0,0" VerticalAlignment="Top" Width="772" RenderTransformOrigin="0.5,0.5">
             <ListBox.RenderTransform>
