@@ -12,7 +12,21 @@ namespace Webcontrollers.Models
         public int Id { get; set; }
         public int A { get; set; }
         public int B { get; set; }
+        public int max;
         public event PropertyChangedEventHandler PropertyChanged;
+
+        public int Max
+        {
+            get
+            {
+                return max;
+            }
+            set
+            {
+                max = value;
+                RaisePropertyChanged("max");
+            }
+        }
 
         private void RaisePropertyChanged(string propname)
         {

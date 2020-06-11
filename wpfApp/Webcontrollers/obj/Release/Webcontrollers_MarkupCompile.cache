@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-D:\Ucll\Jaar 2\Semester 2\Webcontrollers\FinalMQTT\webC\wpfApp\Webcontrollers\obj\Debug\
+D:\Ucll\Jaar 2\Semester 2\Webcontrollers\FinalMQTT\webC\wpfApp\Webcontrollers\obj\Release\
 Webcontrollers
 none
 false
-DEBUG;TRACE
+TRACE
 D:\Ucll\Jaar 2\Semester 2\Webcontrollers\FinalMQTT\webC\wpfApp\Webcontrollers\App.xaml
 11151548125
 
@@ -16,5 +16,5 @@ D:\Ucll\Jaar 2\Semester 2\Webcontrollers\FinalMQTT\webC\wpfApp\Webcontrollers\Ap
 139-621008161
 MainWindow.xaml;
 
-False
+True
 

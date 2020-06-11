@@ -14,6 +14,10 @@
         <Button Name="showButton" Content="show" HorizontalAlignment="Left" Margin="34,62,0,0" VerticalAlignment="Top" Width="75" Click="showButton_Click"/>
         <Label Content="Index:" HorizontalAlignment="Left" Margin="34,166,0,0" VerticalAlignment="Top"/>
         <TextBox Name="indexTextBox" HorizontalAlignment="Left" Height="23" Margin="80,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Name="aButton" Content="A" HorizontalAlignment="Left" Margin="331,166,0,0" VerticalAlignment="Top" Width="75" Click="aButton_Click"/>
+        <Button Name="bButton" Content="B" HorizontalAlignment="Left" Margin="411,166,0,0" VerticalAlignment="Top" Width="75" Click="bButton_Click"/>
+        <Label Content="Kies de hoogste:" HorizontalAlignment="Left" Margin="331,135,0,0" VerticalAlignment="Top" Width="155"/>
+        <Label Name="resultLabel" Content="" HorizontalAlignment="Left" Margin="286,268,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
