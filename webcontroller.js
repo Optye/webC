@@ -1,20 +1,24 @@
 const ttn = require('ttn');
 const mysql = require('mysql');
-const moment = require('moment');
-const config = require('./config.js');
-config.databaseOptions.database = "web_con_db";
+const databaseOptions = {
+    host: 'localhost',
+    user: 'webcontroller',
+    password: 'web',
+    database: 'web_con_db'
+};
+const TTNOptions = {
+    appID: '20180102',
+    accessKey: 'ttn-account-v2.PAUZXYPrQB7VVhB3x_55OsfZrdAQX5S42nxExNSYk_E'
+};
 
-const appID = config.TTNOptions.appID;
-const accessKey = config.TTNOptions.accessKey;
-
-const con = mysql.createConnection(config.databaseOptions);
+const con = mysql.createConnection(databaseOptions);
 
 con.connect(function(err) {
     if (err) throw err;
     console.log("Connected to database");
 });
 
-ttn.data(appID, accessKey)
+ttn.data(TTNOptions.appID, TTNOptions.accessKey)
     .then(function (client) {
         client.on("uplink", async function (devID, payload) {
         console.log("Received uplink from", devID);
